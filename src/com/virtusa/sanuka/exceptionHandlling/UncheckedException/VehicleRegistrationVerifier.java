@@ -17,7 +17,8 @@ public class VehicleRegistrationVerifier {
             VehicleBookStoreKeeper vehicleBookStoreKeeper = new VehicleBookStoreKeeper();
             vehicleBookStoreKeeper.registerVehicleOwnName(citizenship);
         } catch (IllegalArgumentException e) {
-            e.printStackTrace();;
+            System.err.print(e.getMessage());
+            //e.printStackTrace();;
         }
     }
 }
