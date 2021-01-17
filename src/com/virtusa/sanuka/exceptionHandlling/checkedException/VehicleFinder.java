@@ -10,7 +10,8 @@ public class VehicleFinder {
             VehicleBookStoreKeeper vehicleBookStoreKeeper = new VehicleBookStoreKeeper();
             vehicleBookStoreKeeper.findVehicleByNumber("BCD 0000");
         } catch (VehicleDataNotFoundException e) {
-            e.printStackTrace();
+            System.err.print(e.getMessage());
+            //e.printStackTrace();
         }
     }
 }
