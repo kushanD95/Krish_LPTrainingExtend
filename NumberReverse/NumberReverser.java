@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class NumberReverser {
 
     private int originalValue = 0;
