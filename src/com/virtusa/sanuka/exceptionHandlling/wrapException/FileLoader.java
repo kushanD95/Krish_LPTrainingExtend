@@ -9,7 +9,8 @@ public class FileLoader {
         try {
             loadFile();
         } catch (IllegalStateException e) {
-            e.printStackTrace();
+            System.err.print(e.getMessage());
+            //e.printStackTrace();
         }
     }
 
