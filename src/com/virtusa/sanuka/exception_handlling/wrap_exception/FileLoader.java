@@ -8,12 +8,8 @@ import java.io.FileNotFoundException;
 public class FileLoader {
 
     public static void main(String[] args) {
-        try {
-            loadFile();
-        } catch (InsufficientDataNotLoadException e) {
-            System.err.print(e.getMessage());
-            //e.printStackTrace();
-        }
+
+        loadFile();
     }
 
     private static void loadFile() throws InsufficientDataNotLoadException {
@@ -22,7 +18,7 @@ public class FileLoader {
             file = new FileInputStream("./filee.txt");
             System.out.println("file load successfully");
         } catch ( FileNotFoundException e) {
-            throw new InsufficientDataNotLoadException("File not found ",e);
+            throw new InsufficientDataNotLoadException("File not found ");
         }
     }
 }
