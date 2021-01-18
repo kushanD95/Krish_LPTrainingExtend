@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class UsedVehicleBuyer {
 
-    public static void main(String[] args) throws VehicleIsNotAvailableException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int vehicleType;
         HashMap vehicleTypes = UsedVehicleBuyer.setVehicles();
