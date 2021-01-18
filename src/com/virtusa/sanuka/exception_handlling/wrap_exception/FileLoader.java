@@ -18,7 +18,7 @@ public class FileLoader {
             file = new FileInputStream("./filee.txt");
             System.out.println("file load successfully");
         } catch ( FileNotFoundException e) {
-            throw new InsufficientDataNotLoadException("File not found ");
+            throw new InsufficientDataNotLoadException("File not found ",e);
         }
     }
 }
