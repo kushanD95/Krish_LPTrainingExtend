@@ -13,12 +13,7 @@ public class VehicleRegistrationVerifier {
                 "\n\tIf yes press 'y' otherwise press 'n'");
         citizenship = scanner.nextLine();
 
-        try{
             VehicleBookStoreKeeper vehicleBookStoreKeeper = new VehicleBookStoreKeeper();
             vehicleBookStoreKeeper.registerVehicleOwnName(citizenship);
-        } catch (IllegalArgumentException e) {
-            System.err.print(e.getMessage());
-            //e.printStackTrace();;
-        }
     }
 }
