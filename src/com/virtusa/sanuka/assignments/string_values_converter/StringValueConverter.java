@@ -7,7 +7,7 @@ public class StringValueConverter {
     public static void valueCalculate(String string) throws StringCannotBeNullException {
 
         String valuedElements = "";
-        char[] characters = string.trim().toUpperCase().toCharArray();
+        char[] characters = string.trim().toCharArray();
         int stringValue = 0;
         char character;
 
@@ -22,11 +22,11 @@ public class StringValueConverter {
                 break;
             }
 
-            character  = characters[i];
+            character  = Character.toUpperCase(characters[i]);
 
-            if(character >=65 && character <= 90) {
-                valuedElements += (Character.toString(character));
-                stringValue = stringValue + (character - 64);
+            if(character >= 'A' && character <= 'Z') {
+                valuedElements += (Character.toString(characters[i]));
+                stringValue = stringValue + (character - ('A' - 1));
             }
         }
         System.out.println("value of " + valuedElements + " is : " + stringValue);
