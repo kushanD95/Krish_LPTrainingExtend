@@ -1,0 +1,7 @@
+pring:
+  application:
+    name: item
+  jpa:
+    hibernate:
+      ddl-auto: update
+
