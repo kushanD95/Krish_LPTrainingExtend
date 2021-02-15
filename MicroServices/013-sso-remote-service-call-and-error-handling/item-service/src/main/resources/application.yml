@@ -1,0 +1,9 @@
+server:
+  port: 8283
+spring:
+  application:
+    name: item
+  jpa:
+    hibernate:
+      ddl-auto: update
+
