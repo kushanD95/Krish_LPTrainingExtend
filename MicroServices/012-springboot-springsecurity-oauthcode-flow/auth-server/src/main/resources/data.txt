@@ -1,0 +1,43 @@
+INSERT INTO oauth_client_details (client_id, client_secret, web_server_redirect_uri, scope, access_token_validity, refresh_token_validity, resource_ids, authorized_grant_types, additional_information) VALUES ('mobile', '{bcrypt}$2a$10$a7EHJTNUoW0Y1iHSQ.Ej2eat3vu/1KUmB5pY.BDT5BScLcRKFfxjO', 'http://localhost:8080/login', 'READ,WRITE', '3600', '10000', 'inventory,payment', 'authorization_code,password,refresh_token,implicit', '{}');
+
+ INSERT INTO PERMISSION (NAME) VALUES
+ ('create_profile'),
+ ('approve_profile'),
+ ('read_profile'),
+ ('update_profile'),
+ ('delete_profile'),
+ ('add_item'),
+ ('read_item'),
+ ('request_item');
+
+ INSERT INTO role (NAME) VALUES
+		('ROLE_admin'),('ROLE_operator'),('ROLE_farmer'),('ROLE_buyer');
+
+ INSERT INTO PERMISSION_ROLE (PERMISSION_ID, ROLE_ID) VALUES
+     (1,1), /*create admin */
+     (2,1), /* approve_profile admin */
+     (3,1), /* read admin */
+     (4,1), /* update admin */
+     (5,1), /* delete admin */
+     (6,1), /* add_item admin */
+     (7,1), /* read_item admin */
+     (8,1), /* request_item admin */
+     (2,2),  /* read operator */
+     (3,2),  /* update operator */
+     (1,3),  /* create farmer */
+     (3,3),  /* read farmer */
+     (6,3),  /* add_item farmer */
+     (7,3),  /* read_item farmer */
+     (8,4),  /*  request_item buyer*/
+     (7,4)  /* read_item buyer */;
+insert into user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('1', 'sanuka','{bcrypt}$2a$10$GulYPXRx/gRXMLOeQIkoROI9TN.uAYe33WtFFgKBerHO6sVgWlFFm', 'k@sanuka.com', '1', '1', '1', '1');
+insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('2', 'kushan', '{bcrypt}$2a$10$saqKXhfRfcgZFrA9EFDOneuXIY.Svv.AMust398rwgWVt0lWmUcyW','k@kushan.com', '1', '1', '1', '1');
+insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('3', 'fkushan', '{bcrypt}$2a$10$saqKXhfRfcgZFrA9EFDOneuXIY.Svv.AMust398rwgWVt0lWmUcyW','k@kushan.com', '1', '1', '1', '1');
+insert into  user (id, username,password, email, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked) VALUES ('4', 'bkushan', '{bcrypt}$2a$10$saqKXhfRfcgZFrA9EFDOneuXIY.Svv.AMust398rwgWVt0lWmUcyW','k@kushan.com', '1', '1', '1', '1');
+
+INSERT INTO ROLE_USER (ROLE_ID, USER_ID)
+    VALUES
+    (1, 1) /* sanuka-admin pwd- psanuka */,
+    (2, 2) /* kushan-operatorr pwd- pkushan */,
+    (3, 3) /* fkushan-farmer pwd- pkushan */,
+    (4, 4) /* bkushan-buyer pwd- pkushan */;
