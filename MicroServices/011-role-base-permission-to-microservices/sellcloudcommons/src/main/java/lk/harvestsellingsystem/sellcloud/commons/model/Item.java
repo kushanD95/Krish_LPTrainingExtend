@@ -13,6 +13,7 @@ public class Item {
     private char grade;
     private double pricePerUnit;
     private double quantity;
+    private boolean isRequest;
 
     public int getId() {
         return id;
@@ -52,6 +53,14 @@ public class Item {
 
     public void setQuantity(double quantity) {
         this.quantity = quantity;
+    }
+
+    public boolean isRequest() {
+        return isRequest;
+    }
+
+    public void setRequest(boolean request) {
+        isRequest = request;
     }
 }
 

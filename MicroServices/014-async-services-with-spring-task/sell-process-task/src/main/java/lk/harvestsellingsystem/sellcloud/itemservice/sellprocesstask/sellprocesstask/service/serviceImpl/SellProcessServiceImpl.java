@@ -7,7 +7,7 @@ public class SellProcessServiceImpl implements SellProcessService {
     @Override
     public boolean validateQuantity(String quantity){
         boolean isValidate = false;
-       if(quantity > 50) {
+       if(Integer.parseInt(quantity) > 50) {
           isValidate =true;
        }
        return isValidate;
